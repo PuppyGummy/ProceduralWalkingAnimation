@@ -15,8 +15,6 @@ public class ThirdPersonController : MonoBehaviour
 
     private CharacterController controller;
     private Animator anim;
-    private Rigidbody rb;
-    private int scoreCount;
     private Vector3 currentVelocity;
     private Vector3 hitPos;
     private BoxCollider boxCollider;
@@ -32,7 +30,6 @@ public class ThirdPersonController : MonoBehaviour
         anim = transform.GetChild(0).GetChild(0).GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider>();
         controller = GetComponent<CharacterController>();
-        rb = GetComponent<Rigidbody>();
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
